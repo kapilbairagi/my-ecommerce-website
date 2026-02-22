@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FLATICON ===============-->
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Details</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+      <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+880) - 1234 - 5678</span>
+            <span>Our location</span>
+          </div>
+          <p class="header__alert-news">
+            Free shipping for all order over $50
+          </p>
+          <a href="login.html" class="header__top-action">Login / Sign Up</a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="Logo" class="nav__logo-img"/>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt="">
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-br-cross-small"></i>
+            </div>
+          </div>
+          
+         <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Shop</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="offers.html" class="nav__link">Offers</a>
+            </li>
+            </li>
+             <li class="nav__item">
+              <a href="become-seller.html" class="nav__link">Become a Seller</a>
+            </li>
+            <li class="nav__item">
+              <a href="login.html" class="nav__link">LogIn</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input type="text" placeholder="Search for items...." class="form__input"/>
+            <button type="button" class="search__btn" aria-label="Search">
+              <img src="assets/img/search.png" alt="icon-search">
+            </button>
+          </div>
+        </div>
+
+
+       <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="icon-heart">
+            <span class="count"></span>
+          </a>
+
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="icon-cart">
+            <span class="count"></span>
+          </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="assets/img/menu-burger.svg" alt="">
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+         <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+         <li><span class="breadcrumb__link">></span></li>
+         <li><span class="breadcrumb__link">Fashion</span></li>
+         <li><span class="breadcrumb__link">></span></li>
+         <li><span class="breadcrumb__link">Pattern Shirt</span></li>
+        </ul>
+      </section>
+      <!--=============== CATEGORIES DROPDOWN ===============-->
+      <section class="categories-dropdown section container">
+        <div class="dropdown categories-dropdown__container">
+          <button
+            class="btn dropdown-toggle categories-dropdown__select"
+            type="button"
+            id="categoriesDropdownButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="categories-dropdown__selected">All Categories</span>
+            <i class="fi fi-br-angle-down categories-dropdown__arrow"></i>
+          </button>
+          <ul class="dropdown-menu categories-dropdown__list" aria-labelledby="categoriesDropdownButton">
+            <li class="dropdown-header categories-dropdown__title">Women's & Girls' Fashion</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Western Wear</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Muslim Wear</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Traditional Wear</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Shoes</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Innerwear</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Men's & Boys' Fashion</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Western Wear</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Muslim Wear</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Traditional Wear</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Shoes</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Innerwear</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Bags</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Wallets</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Bag Charms & Accessories</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Crossbody & Shoulder Bags</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Tote Bags</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Backpacks</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Top Handle Bags and Clutches</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Watches, Bags, Jewellery</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Watches</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Bags</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Jewellery</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Electronic Accessories</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">TV & Home Appliances</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Electronics Device</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Audio & Video</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Computer Accessories</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Sports & Outdoors</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Exercise & Fitness</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Team Sports</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Outdoor Recreation</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Sports Accessories</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Home & Lifestyle</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Furniture</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Home Decor</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Kitchen & Dining</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Bed & Bath</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Garden & Outdoor</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Mother & Baby</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Baby Clothing</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Diapering & Potty</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Feeding</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Nursery</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Baby Personal Care</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Automotive & Motorbike</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Car Accessories</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Motorcycle Accessories</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Car Electronics</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Oils & Fluids</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Tools & Equipment</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Groceries</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Food Cupboard</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Beverages</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Snacks</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Breakfast Foods</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Canned Goods</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li class="dropdown-header categories-dropdown__title">Health & Beauty</li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Skincare</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Makeup</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Hair Care</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Fragrance</a></li>
+            <li><a class="dropdown-item categories-dropdown__link" href="#">Personal Care</a></li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!--=============== DETAILS ===============-->
+      <section class="details section--lg">
+        <div class="details__container container grid">
+          <div class="details__group">
+            <img src="assets/img/product-8-1.jpg" alt="product image" class="details__img">
+            <div class="details__small-images grid">
+              <img src="assets/img/product-8-2.jpg" alt="product image" class="details__small-img">
+              <img src="assets/img/product-8-1.jpg" alt="product image" class="details__small-img">
+              <img src="assets/img/product-8-2.jpg" alt="product image" class="details__small-img">
+            </div>
+          </div>
+
+          <div class="details__group">
+            <h3 class="details__title">Pattern Shirt</h3>
+            <p class="details__brand">Brand: <span>Nike</span></p>
+
+            <div class="details__price flex">
+              <span class="new__price">$49.99</span>
+              <span class="old__price">$59.99</span>
+              <span class="save__price">25% Off</span>
+            </div>
+
+            <p class="short__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Maiores officiis cumque blanditiis facilis beatae quidem earum molestias repellendus 
+              excepturi pariatur, odio consequatur non eligendi numquam debitis architecto ullam 
+              temporibus a!
+            </p>
+
+            <ul class="product__list">
+              <li class="list__item flex">
+                <i class="fi-br-crown"> 1 Year Kapil Bairagi Brand Warranty</i>
+              </li>
+
+              <li class="list__item flex">
+                <i class="fi-br-refresh"> 30 Days Return Policy</i>
+              </li>
+
+              <li class="list__item flex">
+                <i class="fi-br-credit-card"> Cash on Delivery Available</i>
+              </li>
+            </ul>
+
+            <div class="details__color flex">
+              <span class="details__color-title">Color</span>
+
+              <ul class="color__list">
+                 <li>
+                  <a href="" class="color__link  color-active color-white" style="background-color: hsl(0, 0%, 100%);"></a>
+                </li>
+                <li>
+                  <a href="" class="color__link" style="background-color: hsl(37, 100%, 65%);"></a>
+                </li>
+                <li>
+                  <a href="" class="color__link" style="background-color: hsl(220, 100%, 65%);"></a>
+                </li>
+                <li>
+                  <a href="" class="color__link" style="background-color: hsl(340, 100%, 65%);"></a>
+                </li>
+                <li>
+                  <a href="" class="color__link" style="background-color: hsl(126, 61%, 52%);"></a>
+                </li>
+                <li>
+                  <a href="" class="color__link" style="background-color: hsl(0, 100%, 65%);"></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="details__size flex">
+              <span class="details__size-title">Size</span>
+
+              <ul class="size__list">
+                <li>
+                  <a href="" class="size__link size-active">S</a>
+                </li>
+                <li>
+                  <a href="" class="size__link">M</a>
+                </li>
+                <li>
+                  <a href="" class="size__link">L</a>
+                </li>
+                <li>
+                  <a href="" class="size__link">XL</a>
+                </li>
+                <li>
+                  <a href="" class="size__link">XXL</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="details__action-group">
+              <!-- Quantity -->
+              <input type="number" class="quantity" value="1" min="1" />
+
+              <!-- Add to Cart (icon only) -->
+              <button class="btn btn--sm details__cart-btn" aria-label="Add To Cart">
+                <i class="fi fi-br-shopping-bag-add"></i>
+              </button>
+
+              <!-- Add to Wishlist -->
+              <button class="details__action-btn" aria-label="Add To Wishlist">
+                <i class="fi fi-br-heart"></i>
+              </button>
+            </div>
+
+
+            <ul class="details__meta">
+              <li class="meta__list flex"><span>RKU:</span>FWM15VKT</li>
+              <li class="meta__list flex"><span>Tags:</span>Cloth, Women, Dress</li>
+              <li class="meta__list flex">
+                <span>Availability:</span> 
+                <span class="availability in-stock">In Stock</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== Additional Information & REVIEW TAB ===============-->
+      <section class="details__tab container">
+        <div class="detail__tabs">
+          <span class="detail__tab active-tab" data-target="#info">Additional Information</span>
+          <span class="detail__tab" data-target="#reviews">Reviews(3)</span>
+        </div>
+
+        <div class="details__tabs-content">
+          <div class="details__tab-content active-tab" content id="info">
+            <table class="info__table">
+              <tr>
+                <th>Stand Up</th>
+                <td>35"L*24W*37-45*H(front to back wheel)</td>
+              </tr>
+              <tr>
+                <th>Brand</th>
+                <td>Nike</td>
+              </tr>
+              <tr>
+                <th>Material</th>
+                <td>100% Cotton</td>
+              </tr>
+              <tr>
+                <th>Size</th>
+                <td>S, M, L, XL, XXL</td>
+              </tr>
+              <tr>
+                <th>Weight</th>
+                <td>350g</td>
+              </tr>
+              <tr>
+                <th>Color</th>
+                <td>Red, Blue, Green, Black</td>
+              </tr>
+              <tr>
+                <th>Care Instructions</th>
+                <td>Machine wash cold, tumble dry low</td>
+              </tr>
+              <tr>
+                <th>Fit</th>
+                <td>Regular Fit</td>
+              </tr>
+              <tr>
+                <th>Availability</th>
+                <td>In Stock</td>
+              </tr>
+              <tr>
+                <th>Shipping</th>
+                <td>Free shipping for orders over $50</td>
+              </tr>
+              <tr>
+                <th>Return Policy</th>
+                <td>30 Days Return Policy</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="details__tab-content" content id="reviews">
+            <div class="reviews__container grid">
+              <div class="review__single">
+                <div>
+                  <img src="assets/img/avatar-1.jpg" alt="user image" class="review__img">
+                  <h4 class="review__title">John Doe</h4>
+                  <span class="verified-badge">✔ Verified Buyer</span>
+                </div>
+
+                <div class="review__data">
+                  <div class="review__rating">
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                  </div>
+                  <p class="review__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem.</p>
+                  <span class="review__date">March 10, 2023 at 10:00 AM</span>
+                </div>
+              </div>
+
+              <div class="review__single">
+                <div>
+                  <img src="assets/img/avatar-2.jpg" alt="user image" class="review__img">
+                  <h4 class="review__title">Emily Johnson</h4>
+                  <span class="verified-badge">✔ Verified Buyer</span>
+                </div>
+
+                <div class="review__data">
+                  <div class="review__rating">
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                  </div>
+                  <p class="review__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem.</p>
+                  <span class="review__date">August 25, 2024 at 10:00 PM</span>
+                </div>
+              </div>
+
+              <div class="review__single">
+                <div>
+                  <img src="assets/img/avatar-3.jpg" alt="user image" class="review__img">
+                  <h4 class="review__title">Jane Smith</h4>
+                  <span class="verified-badge">✔ Verified Buyer</span>
+                </div>
+
+                <div class="review__data">
+                  <div class="review__rating">
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                  </div>
+                  <p class="review__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem.</p>
+                  <span class="review__date">March 10, 2023 at 10:00 AM</span>
+                </div>
+              </div>
+            </div>
+            <div action="input" class="review__form">
+              <h4 class="review__form-title">Add a review</h4>
+                <div class="rate__product">
+                  <i class="fi fi-br-star"></i>
+                  <i class="fi fi-br-star"></i>
+                  <i class="fi fi-br-star"></i>
+                  <i class="fi fi-br-star"></i>
+                  <i class="fi fi-br-star"></i>
+                </div>
+
+                <form action="" class="form grid">
+                  <textarea class="form__input textarea" placeholder="Write your review here..."></textarea>
+                  <div class="form__btn"><button type="submit" class="btn">Submit Review</button></div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=============== RELATED PRODUCTS ===============-->
+      <section class="products container section--lg">
+        <h3 class="section__title"><span>Related</span> Products</h3>
+        <div class="products__container grid">
+
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="assets/img/product-2-1.jpg" alt="Product 2">
+
+                    <img src="assets/img/product-2-2.jpg" alt="" class="product__img hover">
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View"><i class="fi fi-br-eye"></i></a>
+                    <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-br-heart"></i></a>
+                  </div>
+
+                  <div class="product__badge light-pink">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Clothing</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                  </div>
+
+                  <div class="product__price flex">
+                    <span class="new__price">$29.99</span>
+                    <span class="old__price">$34.99</span>
+                  </div>
+
+                   <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-br-shopping-bag-add"></i></a>
+                </div>
+              </div>              
+
+               <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="assets/img/product-4-1.jpg" alt="Product 4">
+
+                    <img src="assets/img/product-4-2.jpg" alt="" class="product__img hover">
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View"><i class="fi fi-br-eye"></i></a>
+                    <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-br-heart"></i></a>
+                  </div>
+
+                  <div class="product__badge light-blue">New Arrival</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Clothing</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                  </div>
+
+                  <div class="product__price flex">
+                    <span class="new__price">$29.99</span>
+                    <span class="old__price">$34.99</span>
+                  </div>
+
+                   <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-br-shopping-bag-add"></i></a>
+                </div>
+              </div>
+              
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="assets/img/product-7-1.jpg" alt="Product 7">
+
+                    <img src="assets/img/product-7-2.jpg" alt="" class="product__img hover">
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View"><i class="fi fi-br-eye"></i></a>
+                    <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-br-heart"></i></a>
+                  </div>
+
+                  <div class="product__badge light-green">Popular</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Clothing</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                  </div>
+
+                  <div class="product__price flex">
+                    <span class="new__price">$29.99</span>
+                    <span class="old__price">$34.99</span>
+                  </div>
+
+                   <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-br-shopping-bag-add"></i></a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="assets/img/product-8-1.jpg" alt="Product 8">
+
+                    <img src="assets/img/product-8-2.jpg" alt="" class="product__img hover">
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View"><i class="fi fi-br-eye"></i></a>
+                    <a href="wishlist.html" class="action__btn" aria-label="Add To Wishlist"><i class="fi fi-br-heart"></i></a>
+                  </div>
+                  <div class="product__badge light-pink">-25%</div>
+                
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Clothing</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                    <i class="fi fi-br-star"></i>
+                  </div>
+
+                  <div class="product__price flex">
+                    <span class="new__price">$29.99</span>
+                    <span class="old__price">$34.99</span>
+                  </div>
+
+                   <a href="cart.html" class="action__btn cart__btn" aria-label="Add To Cart"><i class="fi fi-br-shopping-bag-add"></i></a>
+                </div>
+              </div>
+            </div>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="newsletter section">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img src="assets/img/icon-email.svg" alt="email icon" class="newsletter__icon">
+            Sign Up & Get 10% Off
+          </h3>
+
+          <p class="newsletter__description">.... and receive 10% off your first order.</p>
+
+          <form action="" class="newsletter__form">
+            <input type="email" placeholder="Enter your email" class="newsletter__input">
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo"><img src="assets/img/logo.svg" alt="logo" class="footer__logo-img"></a>
+          
+          <h4 class="footer__subtitle">Contact</h4>
+
+          <p class="footer__description"><span>Address:</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p class="footer__description"><span>Phone:</span>(+880)12345678/(+880)12345679</p>
+          <p class="footer__description"><span>Hours:</span>10:00 - 18:00, Mon - Sat</p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+            <div class="footer__social-links flex">
+              <a href=""><img src="assets/img/icon-facebook.svg" alt="facebook" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-twitter.svg" alt="twitter" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-instagram.svg" alt="instagram" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-pinterest.svg" alt="pinterest" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-youtube.svg" alt="youtube" class="footer__social-icon"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h4 class="footer__subtitle">Address</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Delivery Information</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h4 class="footer__subtitle">My Account</h4>
+          <ul class="footer__links">
+            <li><a href="login-register.html" class="footer__link">Sign In</a></li>
+            <li><a href="cart.html" class="footer__link">View Cart</a></li>
+            <li><a href="wishlist.html" class="footer__link">My Wishlist</a></li>
+            <li><a href="#" class="footer__link">Track My Order</a></li>
+            <li><a href="#" class="footer__link">Help</a></li>
+            <li><a href="#" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+          <img src="assets/img/payment-method.png" alt="payment-method">
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="copyright">© 2025 <span class="brand__name">Ratna</span> All rights reserved.</p>
+        <span class="designer">Designed by <span class="designer__name">Kapil Bairagi</span> with ❤️</span>
+      </div>
+    </footer>
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cart-manager.js"></script>
+    <script src="assets/js/wishlist-manager.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== ADD TO CART POPUP ===============-->
+    <div class="cart-popup" id="cart-popup">
+      <div class="cart-popup__overlay"></div>
+      <div class="cart-popup__content">
+        <button class="cart-popup__close" id="popup-close">&times;</button>
+
+        <div class="cart-popup__grid">
+          <!-- Left: Product Image -->
+          <div class="cart-popup__img-box">
+            <img id="popup-img" src="assets/img/default.jpg" alt="Product Image" class="cart-popup__img">
+          </div>
+
+          <!-- Right: Product Info -->
+          <div class="cart-popup__details">
+            <h2 id="popup-title" class="details__title">Colorful Pattern Shirts</h2>
+            
+            <div class="details__group">
+              <span class="details__category" id="popup-category">Clothing</span>
+              <p class="details__brand">Brand: <span>Nike</span></p>
+            </div>
+
+            <div class="details__price flex">
+              <span id="popup-new-price" class="new__price">$29.99</span>
+              <span id="popup-old-price" class="old__price">$34.99</span>
+              <span id="popup-discount" class="discount">-14%</span>
+            </div>
+
+            <p class="details__description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+            </p>
+
+            <ul class="details__meta">
+              <li><span>SKU:</span> <span>N/A</span></li>
+              <li><span>Availability:</span> <span class="availability in-stock">In Stock</span></li>
+            </ul>
+
+            <div class="details__group">
+              <span>Color</span>
+              <div id="popup-colors" class="color__list">
+                <!-- Colors will be added dynamically -->
+              </div>
+            </div>
+
+            <div class="details__group">
+              <span>Size</span>
+              <div id="popup-sizes" class="size__list">
+                <!-- Sizes will be added dynamically -->
+              </div>
+            </div>
+
+            <div class="details__actions">
+              <input type="number" id="popup-quantity" class="quantity" value="1" min="1"/>
+              <!-- ADD THIS CONFIRM BUTTON -->
+              <button class="btn btn--sm details__cart-btn" id="confirm-add" aria-label="Add To Cart">
+                <i class="fi fi-br-shopping-bag-add"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

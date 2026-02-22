@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FLATICON ===============-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Login</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+880) - 1234 - 5678</span>
+            <span>Our location</span>
+          </div>
+          <p class="header__alert-news">
+            Free shipping for all order over $50
+          </p>
+          <a href="login.html" class="header__top-action">Login / Sign Up</a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="Logo" class="nav__logo-img"/>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt="">
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-br-cross-small"></i>
+            </div>
+          </div>
+          
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link active-link">Shop</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="offers.html" class="nav__link">Offers</a>
+            </li>
+             <li class="nav__item">
+              <a href="become-seller.html" class="nav__link">Become a Seller</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="login.html" class="nav__link">LogIn</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input type="text" placeholder="Search for items...." class="form__input"/>
+            <button type="button" class="search__btn" aria-label="Search">
+              <img src="assets/img/search.png" alt="icon-search">
+            </button>
+          </div>
+        </div>
+
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="icon-heart">
+            <span class="count"></span>
+          </a>
+
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="icon-cart">
+            <span class="count"></span>
+          </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="assets/img/menu-burger.svg" alt="">
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+    <!--=============== LOGIN-REGISTER ===============-->
+      <section class="login-register section--lg">
+        <div class="login-register__container container">
+          <a href="index.html"><img src="assets/img/logo.svg" alt="Logo" /></a>
+          <div class="login">
+            <h3 class="section__title">Login</h3>
+            <form action="" class="form grid">
+              <div class="input-box">
+                <input type="text" placeholder="UserName" class="form__input">
+                <i class="fi fi-br-user"></i>
+              </div>
+
+              <div class="input-box">
+                <input type="password" placeholder="Password" class="form__input">
+                <i class="fi fi-br-lock"></i>
+              </div>
+              
+              <div class="form__options">
+                <label class="form__remember">
+                  <input type="checkbox" checked> Remember Me
+                </label>
+                <a href="forget-password.html" class="form__forgot">Forget Password</a>
+              </div>
+              
+              <div class="form__btn">
+                <button type="submit" class="btn btn--full">Login</button>
+              </div>
+              
+              <div class="register__bottom">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+   <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

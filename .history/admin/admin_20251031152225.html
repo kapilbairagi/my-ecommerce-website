@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+
+  <!-- Your existing stylesheet -->
+  <link rel="stylesheet" href="/public/assets/css/styles.css" />
+  <link rel="icon" href="/public/assets/img/tab-img.png" type="image/png">
+</head>
+<body>
+  <!-- Centered logo -->
+  <header class="admin__header">
+    <a href="/public/index.html" class="admin__logo" aria-label="Home">
+      <img src="/public/assets/img/logo.svg" alt="Logo">
+    </a>
+  </header>
+
+   <main class="admin__wrap">
+    <section class="admin__card">
+      <h2 class="section__title admin__title">Add New Product</h2>
+
+      <form id="product-form" class="admin__form" enctype="multipart/form-data">
+        <div class="form__group">
+          <label class="form__label">Title</label>
+          <input name="title" class="form__input" type="text" placeholder="Product title" required />
+        </div>
+
+        <div class="form__group">
+          <label class="form__label">Price</label>
+          <input name="price" class="form__input" type="number" step="0.01" min="0" placeholder="0.00" required />
+
+          <!-- NEW: target categories under Price -->
+          <div class="targets__wrap">
+            <span class="form__label">Target Sections</span>
+            <div class="targets__row">
+              <label><input type="checkbox" name="targets" value="featured"> featured</label>
+              <label><input type="checkbox" name="targets" value="popular"> popular</label>
+              <label><input type="checkbox" name="targets" value="new-added"> new-added</label>
+              <label><input type="checkbox" name="targets" value="new-arrivals"> new-arrivals</label>
+            </div>
+          </div>
+
+          <!-- Optional product badge (shows on card) -->
+          <div class="form__group" style="margin-top:.5rem;">
+            <label class="form__label">Badge (optional)</label>
+            <input name="badge" class="form__input" type="text" placeholder="e.g. New, Hot, -20%" />
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label">Category</label>
+          <input name="category" class="form__input" type="text" placeholder="e.g. Shoes, Bags" />
+        </div>
+
+        <div class="form__group form__group--full">
+          <label class="form__label">Description</label>
+          <textarea name="description" class="form__textarea" rows="3" placeholder="Short description"></textarea>
+        </div>
+        <div class="form__group form__group--full">
+          <label class="form__label">Image</label>
+          <div id="uploader" class="admin__uploader"> <!-- Added id="uploader" here -->
+              <div class="admin__uploader-thumb" id="thumb">
+                  <img id="thumbImg" alt="Preview" style="display:none;">
+                  <span id="thumbPlaceholder">No image selected</span>
+              </div>
+              <input id="imageInput" name="image" type="file" accept="image/*" style="display:none;" />
+              <small>Drag & drop an image here, or click to choose</small>
+          </div>
+        </div>
+
+        <div class="admin__actions form__group--full">
+          <button type="submit" class="btn btn--md"><i class="fi-br-plus"></i> Publish Product</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="admin__list">
+      <h2 class="section__title admin__subtitle">Latest Products</h2>
+      <div id="admin-products" class="admin__grid"></div>
+    </section>
+  </main>
+
+  <div id="admin-toast" class="notification" style="opacity:0;"></div>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="/public/assets/js/products-render.js"></script>
+  <script src="/public/assets/js/admin.js"></script>
+  <script src="/public/assets/js/main.js"></script>
+</body>
+</html>
