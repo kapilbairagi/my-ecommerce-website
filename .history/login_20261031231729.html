@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FLATICON ===============-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Login</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+880) - 1234 - 5678</span>
+            <span>Our location</span>
+          </div>
+          <p class="header__alert-news">
+            Free shipping for all order over $50
+          </p>
+          <a href="login.html" class="header__top-action">Login / Sign Up</a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="Logo" class="nav__logo-img"/>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt="">
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-br-cross-small"></i>
+            </div>
+          </div>
+          
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Shop</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="offers.html" class="nav__link">Offers</a>
+            </li>
+             <li class="nav__item">
+              <a href="become-seller.html" class="nav__link">Become a Seller</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="login.html" class="nav__link active-link">LogIn</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input type="text" placeholder="Search for items...." class="form__input"/>
+            <button type="button" class="search__btn" aria-label="Search">
+              <i class="fi fi-br-search"></i>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="icon-heart">
+            <span class="count"></span>
+          </a>
+
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="icon-cart">
+            <span class="count"></span>
+          </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="assets/img/menu-burger.svg" alt="">
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+    
+    <!--=============== LOGIN-REGISTER ===============-->
+      <section class="login-register section--lg">
+        <div class="login-register__container container">
+          <a href="index.html"><img src="assets/img/logo.svg" alt="Logo" /></a>
+          <div class="login">
+            <h3 class="section__title">Login</h3>
+            
+            <!-- UPDATED FORM STARTS HERE -->
+            <form id="loginForm" action="" class="form grid">
+              <div class="input-box">
+                <!-- Changed to type="email" and added id="login-email" -->
+                <input type="email" id="login-email" placeholder="Email" class="form__input" required>
+                <i class="fi fi-br-envelope"></i>
+              </div>
+
+              <div class="input-box">
+                <input type="password" id="login-password" placeholder="Password" class="form__input" required>
+                <i class="fi fi-br-lock"></i>
+                <i class="fi fi-br-eye toggle-password" data-target="login-password"></i>
+              </div>
+              
+              <div class="form__options">
+                <label class="form__remember">
+                  <input type="checkbox" checked> Remember Me
+                </label>
+                <a href="forget-password.html" class="form__forgot">Forget Password</a>
+              </div>
+              
+              <div class="form__btn">
+                <button type="submit" class="btn btn--full">Login</button>
+              </div>
+              
+              <div class="register__bottom">
+                <p>Don't have an account? <a href="register.html">Create Account</a></p>
+              </div>
+            </form>
+            <!-- UPDATED FORM ENDS HERE -->
+
+          </div>
+        </div>
+      </section>
+
+   <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+   <!--=============== AUTHENTICATION SCRIPT ===============-->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('loginForm');
+        const emailInput = document.getElementById('login-email');
+        const passwordInput = document.getElementById('login-password');
+        const passIndicator = document.getElementById('login-password-indicator');
+
+        // Exact regex: 8+ chars, 1 upper, 1 lower, 1 number, ONLY @$!%*?& allowed
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        // Live validation for password
+        function validateLoginPassword() {
+            const val = passwordInput.value;
+            
+            if (val.length === 0) {
+                passIndicator.textContent = "";
+                passIndicator.className = "password-indicator";
+                return false;
+            }
+
+            if (passwordRegex.test(val)) {
+                passIndicator.innerHTML = "✔"; 
+                passIndicator.className = "password-indicator success";
+                return true;
+            } else {
+                passIndicator.textContent = "Must be 8+ chars, 1 Upper, 1 Lower, 1 Number, and only use @$!%*?&";
+                passIndicator.className = "password-indicator error";
+                return false;
+            }
+        }
+
+        passwordInput.addEventListener('input', validateLoginPassword);
+
+        // Form Submission
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Check if password meets rules before sending
+            if (!validateLoginPassword()) {
+                return;
+            }
+
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Save user to localStorage for the header greeting
+                    localStorage.setItem('loggedInUser', JSON.stringify(data.user));
+                    showNotification(`Welcome back, ${data.user.username}!`, "success");
+                    setTimeout(() => { window.location.href = 'index.html'; }, 1500);
+                } else {
+                    showNotification(data.message, "error");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Error: Make sure your backend server is running.");
+            }
+        });
+      });
+      document.addEventListener('DOMContentLoaded', () => {
+      // Add this helper function at the top
+      function showNotification(message, type = 'success') {
+          const existing = document.querySelectorAll('.notification');
+        existing.forEach(n => n.remove());
+
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed; top: 20px; right: 20px; padding: 15px 25px;
+            border-radius: 8px; background: ${type === 'success' ? 'hsl(176,88%,27%)' : '#dc3545'};
+            color: white; z-index: 10000; font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 400px;
+            animation: slideInRight 0.3s ease forwards;
+        `;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideOutRight 0.3s ease forwards';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }
+
+   </script>
+
+    
+  </body>
+</html>

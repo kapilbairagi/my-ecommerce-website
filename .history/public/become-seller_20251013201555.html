@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Become a Seller</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+880) - 1234 - 5678</span>
+            <span>Our location</span>
+          </div>
+          <p class="header__alert-news">
+            Free shipping for all order over $50
+          </p>
+          <a href="register.html" class="header__top-action">Login / Sign Up</a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="Logo" class="nav__logo-img"/>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="assets/img/logo.svg" alt="">
+            </a>
+
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-br-cross-small"></i>
+            </div>
+          </div>
+          
+         <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Shop</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="offers.html" class="nav__link">Offers</a>
+            </li>
+             <li class="nav__item">
+              <a href="become-seller.html" class="nav__link active-link">Become a Seller</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="register.html" class="nav__link">LogIn</a>
+            </li>
+
+          </ul>
+
+          <div class="header__search">
+            <input type="text" placeholder="Search for items...." class="form__input"/>
+            <button type="button" class="search__btn" aria-label="Search">
+              <img src="assets/img/search.png" alt="icon-search">
+            </button>
+          </div>
+        </div>
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="icon-heart">
+            <span class="count"></span>
+          </a>
+
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="icon-cart">
+            <span class="count"></span>
+          </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="assets/img/menu-burger.svg" alt="">
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== SELLER HERO ===============-->
+      <section class="seller-hero">
+        <div class="container">
+          <h1 class="seller-hero__title">Start Selling on Our Platform</h1>
+          <p class="seller-hero__description">Join thousands of sellers who are growing their business with our marketplace. Reach millions of customers and grow your brand.</p>
+          <a href="#seller-form" class="btn">Get Started Now</a>
+        </div>
+      </section>
+
+      <!--=============== SELLER STEPS ===============-->
+      <section class="container">
+        <h2 class="section__title"><span>How It Works</span></h2>
+        <div class="seller-steps">
+          <div class="seller-step">
+            <div class="seller-step__icon">
+              <i class="fi fi-br-user-add"></i>
+            </div>
+            <h3 class="seller-step__title">Create Account</h3>
+            <p class="seller-step__description">Sign up as a seller and complete your profile with necessary business information.</p>
+          </div>
+          
+          <div class="seller-step">
+            <div class="seller-step__icon">
+              <i class="fi fi-br-box-open"></i>
+            </div>
+            <h3 class="seller-step__title">List Products</h3>
+            <p class="seller-step__description">Add your products with detailed descriptions, high-quality images, and competitive pricing.</p>
+          </div>
+          
+          <div class="seller-step">
+            <div class="seller-step__icon">
+              <i class="fi fi-br-rocket"></i>
+            </div>
+            <h3 class="seller-step__title">Start Selling</h3>
+            <p class="seller-step__description">Go live and start receiving orders. We handle payments and provide seller support.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== SELLER BENEFITS ===============-->
+      <section class="seller-benefits">
+        <div class="container benefits-container">
+          <div class="benefits-content">
+            <h2>Why Sell With Us?</h2>
+            <ul class="benefits-list">
+              <li><i class="fi fi-br-users"></i> Access to millions of potential customers</li>
+              <li><i class="fi fi-br-shield-check"></i> Secure payment processing</li>
+              <li><i class="fi fi-br-truck-side"></i> Fulfillment and shipping support</li>
+              <li><i class="fi fi-br-chart-line-up"></i> Marketing and promotional tools</li>
+              <li><i class="fi fi-br-headset"></i> Dedicated seller support team</li>
+              <li><i class="fi fi-br-analytics"></i> Detailed analytics and insights</li>
+            </ul>
+          </div>
+          <div class="benefits-image">
+            <img src="assets/img/seller-benefits.svg" alt="Seller Benefits">
+          </div>
+        </div>
+      </section>
+
+      <!--=============== SELLER FORM ===============-->
+      <section class="seller-form-section" id="seller-form">
+        <div class="container">
+          <div class="seller-form-container">
+            <h2 class="seller-form-title">Apply to Become a Seller</h2>
+            <form class="seller-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="full-name" class="form-label">Full Name</label>
+                  <input type="text" id="full-name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                  <label for="business-name" class="form-label">Business Name</label>
+                  <input type="text" id="business-name" class="form-control" placeholder="Enter your business name" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="business-address" class="form-label">Business Address</label>
+                <input type="text" id="business-address" class="form-control" placeholder="Enter your business address" required>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="business-type" class="form-label">Business Type</label>
+                  <select id="business-type" class="form-control" required>
+                    <option value="">Select business type</option>
+                    <option value="individual">Individual/Sole Proprietor</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="corporation">Corporation</option>
+                    <option value="llc">LLC</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="product-category" class="form-label">Main Product Category</label>
+                  <select id="product-category" class="form-control" required>
+                    <option value="">Select category</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="home">Home & Kitchen</option>
+                    <option value="beauty">Beauty & Personal Care</option>
+                    <option value="sports">Sports & Outdoors</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="business-description" class="form-label">Business Description</label>
+                <textarea id="business-description" class="form-control form-textarea" placeholder="Describe your business and products" required></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="website" class="form-label">Website (Optional)</label>
+                <input type="url" id="website" class="form-control" placeholder="Enter your website URL">
+              </div>
+              
+              <div class="form-submit">
+                <button type="submit" class="btn btn--md">Submit Application</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== SELLER FAQ ===============-->
+      <section class="seller-faq">
+        <div class="container">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What are the fees for selling on your platform?</span>
+                <i class="fi fi-br-angle-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>We charge a competitive commission fee on each sale, which varies by product category. There are no monthly subscription fees. You only pay when you make a sale.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do I get paid for my sales?</span>
+                <i class="fi fi-br-angle-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Payments are processed securely through our platform. We transfer earnings to your bank account on a bi-weekly basis after deducting our commission and any applicable fees.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What support do you provide to sellers?</span>
+                <i class="fi fi-br-angle-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>We offer comprehensive seller support including account management, marketing tools, analytics dashboard, and a dedicated support team to help you succeed.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How long does the approval process take?</span>
+                <i class="fi fi-br-angle-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Typically, seller applications are reviewed within 2-3 business days. You'll receive an email notification once your application is approved or if we need additional information.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I sell internationally?</span>
+                <i class="fi fi-br-angle-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, we support international selling. However, you'll need to comply with the regulations of the countries you wish to sell to and handle international shipping accordingly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo"><img src="assets/img/logo.svg" alt="logo" class="footer__logo-img"></a>
+          
+          <h4 class="footer__subtitle">Contact</h4>
+
+          <p class="footer__description"><span>Address:</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p class="footer__description"><span>Phone:</span>(+880)12345678/(+880)12345679</p>
+          <p class="footer__description"><span>Hours:</span>10:00 - 18:00, Mon - Sat</p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+            <div class="footer__social-links flex">
+              <a href=""><img src="assets/img/icon-facebook.svg" alt="facebook" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-twitter.svg" alt="twitter" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-instagram.svg" alt="instagram" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-pinterest.svg" alt="pinterest" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-youtube.svg" alt="youtube" class="footer__social-icon"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h4 class="footer__subtitle">Address</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Delivery Information</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h4 class="footer__subtitle">My Account</h4>
+          <ul class="footer__links">
+            <li><a href="login-register.html" class="footer__link">Sign In</a></li>
+            <li><a href="cart.html" class="footer__link">View Cart</a></li>
+            <li><a href="wishlist.html" class="footer__link">My Wishlist</a></li>
+            <li><a href="#" class="footer__link">Track My Order</a></li>
+            <li><a href="#" class="footer__link">Help</a></li>
+            <li><a href="#" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+          <img src="assets/img/payment-method.png" alt="payment-method">
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="copyright">© 2025 <span class="brand__name">Ratna</span> All rights reserved.</p>
+        <span class="designer">Designed by <span class="designer__name">Kapil Bairagi</span> with ❤️</span>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/cart-manager.js"></script>
+    <script src="assets/js/wishlist-manager.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

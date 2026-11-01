@@ -1,0 +1,28 @@
+<!-- components/quick-view.html -->
+<div class="quick-view" id="quick-view">
+  <div class="quick-view__overlay"></div>
+  <div class="quick-view__content">
+    <button class="quick-view__close" id="quick-view-close">&times;</button>
+    <div class="quick-view__grid">
+      <!-- Left: Image -->
+      <div class="quick-view__img-box">
+        <img id="qv-img" src="" alt="Product">
+      </div>
+      <!-- Right: Info -->
+      <div class="quick-view__details">
+        <h2 id="qv-title">Product Title</h2>
+        <div class="quick-view__rating">
+          <i class="fi fi-br-star"></i><i class="fi fi-br-star"></i><i class="fi fi-br-star"></i><i class="fi fi-br-star"></i><i class="fi fi-br-star"></i>
+        </div>
+        <div class="quick-view__price flex">
+          <span id="qv-price" class="new__price">$29.99</span>
+        </div>
+        <p id="qv-desc" class="short__description">Short description here...</p>
+        
+        <!-- You can even put Color/Size selectors here -->
+        
+        <button class="btn btn--md" onclick="alert('Close this and click Buy Now on the card!')">View Full Details</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <!--=============== FLATICON ===============-->
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Cart</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <div id="header-placeholder"></div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+        
+      <!--=============== CATEGORIES DROPDOWN ===============-->
+      <div id="categories-placeholder"></div>
+
+      <!--=============== CART ===============-->
+      <section class="cart container section--lg">
+        <div class="table__container">
+          <table class="table cart__table">
+            <tr>
+              <th>Product Image</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Size</th>
+              <th>Color</th>
+              <th>Quantity</th>
+              <th>Subtotal</th> 
+              <th>Remove</th>
+            </tr>
+            <!-- Items will be added dynamically by JavaScript -->
+          </table>
+        </div>
+
+
+        <div class="divider">
+          <i class="fi fi-br-fingerprint"></i>
+        </div>
+
+        <div class="cart__group grid">
+          <div>
+            <div class="cart__shipping">
+              <h3 class="section__title">Shipping Address</h3>
+
+              <form id="shipping-form" action="" class="form grid">
+                <input type="hidden" id="editing-address-id" value="">
+                <!-- Recipient's Name -->
+                <label for="name">Recipient’s Name *</label>
+                <input type="text" id="ship-name" class="form__input" placeholder="Input the real name" required>
+
+               <!-- Phone Number -->
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="ship-phone" class="form__input" placeholder="e.g. 01712345678" required 
+                    pattern="[0-9]{11}" maxlength="11" minlength="11" 
+                    title="Please enter exactly 11 digits"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)">
+               
+               <!-- Region/City/District -->
+                <label for="ship-city">Region/City/District *</label>
+                <div class="custom-select-wrapper">
+                  <!-- Readonly input to store the value and trigger dropdown -->
+                  <input type="text" id="ship-city" placeholder="Select your District" class="form__input custom-select-input" readonly required>
+                  <i class="fi fi-br-angle-down custom-select-icon"></i>
+
+                  <!-- The Dropdown Menu -->
+                  <ul class="custom-select-menu">
+                    <li class="custom-group-title">Dhaka Division</li>
+                    <li class="custom-option" data-value="Dhaka">Dhaka</li>
+                    <li class="custom-option" data-value="Faridpur">Faridpur</li>
+                    <li class="custom-option" data-value="Gazipur">Gazipur</li>
+                    <li class="custom-option" data-value="Gopalganj">Gopalganj</li>
+                    <li class="custom-option" data-value="Kishoreganj">Kishoreganj</li>
+                    <li class="custom-option" data-value="Madaripur">Madaripur</li>
+                    <li class="custom-option" data-value="Manikganj">Manikganj</li>
+                    <li class="custom-option" data-value="Munshiganj">Munshiganj</li>
+                    <li class="custom-option" data-value="Narayanganj">Narayanganj</li>
+                    <li class="custom-option" data-value="Narsingdi">Narsingdi</li>
+                    <li class="custom-option" data-value="Rajbari">Rajbari</li>
+                    <li class="custom-option" data-value="Shariatpur">Shariatpur</li>
+                    <li class="custom-option" data-value="Tangail">Tangail</li>
+
+                    <li class="custom-group-title">Chattogram Division</li>
+                    <li class="custom-option" data-value="Bandarban">Bandarban</li>
+                    <li class="custom-option" data-value="Brahmanbaria">Brahmanbaria</li>
+                    <li class="custom-option" data-value="Chandpur">Chandpur</li>
+                    <li class="custom-option" data-value="Chattogram">Chattogram</li>
+                    <li class="custom-option" data-value="Cox's Bazar">Cox's Bazar</li>
+                    <li class="custom-option" data-value="Cumilla">Cumilla</li>
+                    <li class="custom-option" data-value="Feni">Feni</li>
+                    <li class="custom-option" data-value="Khagrachhari">Khagrachhari</li>
+                    <li class="custom-option" data-value="Lakshmipur">Lakshmipur</li>
+                    <li class="custom-option" data-value="Noakhali">Noakhali</li>
+                    <li class="custom-option" data-value="Rangamati">Rangamati</li>
+
+                    <li class="custom-group-title">Rajshahi Division</li>
+                    <li class="custom-option" data-value="Bogura">Bogura</li>
+                    <li class="custom-option" data-value="Chapainawabganj">Chapainawabganj</li>
+                    <li class="custom-option" data-value="Joypurhat">Joypurhat</li>
+                    <li class="custom-option" data-value="Naogaon">Naogaon</li>
+                    <li class="custom-option" data-value="Natore">Natore</li>
+                    <li class="custom-option" data-value="Pabna">Pabna</li>
+                    <li class="custom-option" data-value="Rajshahi">Rajshahi</li>
+                    <li class="custom-option" data-value="Sirajganj">Sirajganj</li>
+
+                    <li class="custom-group-title">Khulna Division</li>
+                    <li class="custom-option" data-value="Bagerhat">Bagerhat</li>
+                    <li class="custom-option" data-value="Chuadanga">Chuadanga</li>
+                    <li class="custom-option" data-value="Jashore">Jashore</li>
+                    <li class="custom-option" data-value="Jhenaidah">Jhenaidah</li>
+                    <li class="custom-option" data-value="Khulna">Khulna</li>
+                    <li class="custom-option" data-value="Kushtia">Kushtia</li>
+                    <li class="custom-option" data-value="Magura">Magura</li>
+                    <li class="custom-option" data-value="Meherpur">Meherpur</li>
+                    <li class="custom-option" data-value="Narail">Narail</li>
+                    <li class="custom-option" data-value="Satkhira">Satkhira</li>
+
+                    <li class="custom-group-title">Barishal Division</li>
+                    <li class="custom-option" data-value="Barguna">Barguna</li>
+                    <li class="custom-option" data-value="Barishal">Barishal</li>
+                    <li class="custom-option" data-value="Bhola">Bhola</li>
+                    <li class="custom-option" data-value="Jhalokati">Jhalokati</li>
+                    <li class="custom-option" data-value="Patuakhali">Patuakhali</li>
+                    <li class="custom-option" data-value="Pirojpur">Pirojpur</li>
+
+                    <li class="custom-group-title">Sylhet Division</li>
+                    <li class="custom-option" data-value="Habiganj">Habiganj</li>
+                    <li class="custom-option" data-value="Moulvibazar">Moulvibazar</li>
+                    <li class="custom-option" data-value="Sunamganj">Sunamganj</li>
+                    <li class="custom-option" data-value="Sylhet">Sylhet</li>
+
+                    <li class="custom-group-title">Rangpur Division</li>
+                    <li class="custom-option" data-value="Dinajpur">Dinajpur</li>
+                    <li class="custom-option" data-value="Gaibandha">Gaibandha</li>
+                    <li class="custom-option" data-value="Kurigram">Kurigram</li>
+                    <li class="custom-option" data-value="Lalmonirhat">Lalmonirhat</li>
+                    <li class="custom-option" data-value="Nilphamari">Nilphamari</li>
+                    <li class="custom-option" data-value="Panchagarh">Panchagarh</li>
+                    <li class="custom-option" data-value="Rangpur">Rangpur</li>
+                    <li class="custom-option" data-value="Thakurgaon">Thakurgaon</li>
+
+                    <li class="custom-group-title">Mymensingh Division</li>
+                    <li class="custom-option" data-value="Jamalpur">Jamalpur</li>
+                    <li class="custom-option" data-value="Mymensingh">Mymensingh</li>
+                    <li class="custom-option" data-value="Netrokona">Netrokona</li>
+                    <li class="custom-option" data-value="Sherpur">Sherpur</li>
+                  </ul>
+                </div>
+                <div class="form__group grid">
+                  <input type="text" id="ship-street" placeholder="Street/House No./Village/Area" class="form__input" required>
+                  <input type="text" id="ship-postal" placeholder="Postal Code/ZIP" pattern="[A-Za-z0-9\s]{5,10}" class="form__input" required>
+                </div>
+                <div class="form__btn">
+                  <button class="btn flex btn--md" type="submit">Save Address</button>
+                </div>
+              </form>
+
+            </div>
+            
+            <div class="cart__coupon">
+              <h3 class="section__title">Apply Coupon</h3>
+              <form action="" class="coupon__form form grid">
+                <div class="form__group grid">
+                  <input type="text" placeholder="Enter your coupon code" class="form__input">
+                  <div class="form__btn">
+                    <button class="btn flex btn--md"><i class="fi-br-label"></i>Apply</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="cart__total">
+            <h3 class="section__title">Cart Total</h3>
+
+            <table class="cart__total-table">
+              <tr>
+                <td><span class="cart__total-title">Subtotal</span></td>
+                <td><span class="cart__total-price"></span></td>
+              </tr>
+              <tr>
+                <td><span class="cart__total-title">Shipping</span></td>
+                <td><span class="cart__total-price"></span></td>
+              </tr>
+              <tr>
+                <td><span class="cart__total-title">Total</span></td>
+                <td><span class="cart__total-price"></span></td>
+              </tr>
+            </table>
+
+            <a href="checkout.html" class="btn flex btn--md"><i class="fi fi-br-box-alt"></i>Proceed To Checkout</a>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <div id="newsletter-placeholder"></div>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <div id="footer-placeholder"></div>
+
+     <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cart-manager.js"></script>
+    <script src="assets/js/wishlist-manager.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- component-loader script -->
+	  <script src="components/component-loader.js"></script>  
+  </body>
+</html>

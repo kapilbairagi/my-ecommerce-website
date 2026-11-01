@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <!--=============== FLATICON ===============-->
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Account</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <div id="header-placeholder"></div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+         <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+         <li><span class="breadcrumb__link">></span></li>
+         <li><a href="shop.html" class="breadcrumb__link">Shop</a></li>
+         <li><span class="breadcrumb__link">></span></li>
+         <li><span class="breadcrumb__link">Account</span></li>
+        </ul>
+      </section>
+
+      <!--=============== ACCOUNTS ===============-->
+      <section class="accounts section--lg">
+        <div class="accounts__container container grid">
+          <div class="account__tabs">
+            <p class="account__tab active-tab" data-target="#dashboard">
+              <i class="fi fi-br-settings-sliders"></i>Dashboard
+            </p>
+
+            <p class="account__tab" data-target="#orders">
+              <i class="fi fi-br-shopping-bag"></i>Orders
+            </p>
+
+            <p class="account__tab" data-target="#update-profile">
+              <i class="fi fi-br-user"></i>Update Profile
+            </p>
+
+            <p class="account__tab" data-target="#address">
+              <i class="fi fi-br-marker"></i>My Address
+            </p>
+
+            <p class="account__tab" data-target="#change-password">
+              <i class="fi fi-br-password"></i>Change Password
+            </p>
+
+            <p class="account__tab" id="logout-btn">
+              <i class="fi fi-br-exit"></i>Logout
+            </p>
+          </div>
+
+          <div class="tabs__content">
+            
+            <!-- 1. DASHBOARD TAB -->
+            <div class="tab__content active-tab" content id="dashboard">
+              <h3 class="tab__header" id="welcome-message">Hello User!</h3>
+              <div class="tab__body">
+                <p class="tab__description" style="margin-bottom: 1.5rem;">
+                  From your account dashboard, you can easily check & view your recent orders, manage your shipping and billing addresses, and edit your password and account details.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                  <!-- User Info Card -->
+                  <div style="border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 0.5rem; background: #f9f9f9;">
+                    <h4 style="margin-bottom: 1rem; color: var(--first-color);"><i class="fi fi-br-user"></i> Account Info</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Name:</strong> <span id="dash-name">Loading...</span></p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Email:</strong> <span id="dash-email">Loading...</span></p>
+                    <a href="#" class="edit" style="font-size: 0.85rem; margin-top: 1rem; display: inline-block;" onclick="document.querySelector('[data-target=\'#update-profile\']').click();">Edit Profile</a>
+                  </div>
+
+                  <!-- Recent Orders Card -->
+                  <div style="border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 0.5rem; background: #f9f9f9;">
+                    <h4 style="margin-bottom: 1rem; color: var(--first-color);"><i class="fi fi-br-shopping-bag"></i> Recent Orders</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Total Orders:</strong> <span id="dash-orders">0</span></p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Pending:</strong> <span id="dash-pending">0</span></p>
+                    <a href="#" class="edit" style="font-size: 0.85rem; margin-top: 1rem; display: inline-block;" onclick="document.querySelector('[data-target=\'#orders\']').click();">View Orders</a>
+                  </div>
+
+                  <!-- Wishlist Card -->
+                  <div style="border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 0.5rem; background: #f9f9f9;">
+                    <h4 style="margin-bottom: 1rem; color: var(--first-color);"><i class="fi fi-br-heart"></i> Wishlist</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Saved Items:</strong> <span id="dash-wishlist">0</span></p>
+                    <a href="wishlist.html" class="edit" style="font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Go to Wishlist</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. ORDERS TAB -->
+            <div class="tab__content" content id="orders">
+              <h3 class="tab__header">Your Orders</h3>
+              <div class="tab__body">
+                <table class="placed__order-table">
+                  <thead>
+                    <tr>
+                      <th>Orders</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Total</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="user-orders-body">
+                    <!-- JavaScript will load orders here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 3. UPDATE PROFILE TAB -->
+            <div class="tab__content" content id="update-profile">
+              <h3 class="tab__header">Update Profile</h3>
+              <div class="tab__body">
+                <form id="update-profile-form" class="form grid">
+                  <input type="text" id="update-username" placeholder="Username" class="form__input" required>
+                  <div class="form__btn">
+                    <button type="submit" class="btn btn--md">Save Changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- 4. MY ADDRESS TAB -->
+            <div class="tab__content" content id="address">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color-alt); padding: 1rem;">
+                <h3 class="tab__header" style="margin: 0; border: none; padding: 0;">My Addresses</h3>
+                <a href="cart.html" class="btn btn--sm" style="margin: 0;"><i class="fi-br-plus"></i> Add New Address</a>
+              </div>
+              
+              <div class="tab__body" id="address-list-container">
+                <!-- Address cards will be injected here by JavaScript -->
+              </div>
+            </div>
+
+            <!-- 5. CHANGE PASSWORD TAB -->
+            <div class="tab__content" content id="change-password">
+              <h3 class="tab__header">Change Password</h3>
+              <div class="tab__body">
+                <form id="change-password-form" class="form grid">
+                  
+                  <!-- Current Password -->
+                  <div class="input-box">
+                    <input type="password" id="current-pass" placeholder="Current Password" class="form__input" required>
+                    <i class="fi fi-br-lock" style="left: 14px; color: var(--first-color);"></i>
+                    <i class="fi fi-br-eye toggle-password" data-target="current-pass"></i>
+                  </div>
+                  <div id="current-pass-indicator" class="password-indicator"></div>
+                  
+                  <!-- New Password -->
+                  <div class="input-box">
+                    <input type="password" id="new-pass" placeholder="New Password" class="form__input" required>
+                    <i class="fi fi-br-lock" style="left: 14px; color: var(--first-color);"></i>
+                    <i class="fi fi-br-eye toggle-password" data-target="new-pass"></i>
+                  </div>
+                  <div id="new-pass-indicator" class="password-indicator"></div>
+                  
+                  <!-- Confirm New Password -->
+                  <div class="input-box">
+                    <input type="password" id="confirm-new-pass" placeholder="Confirm Password" class="form__input" required>
+                    <i class="fi fi-br-lock" style="left: 14px; color: var(--first-color);"></i>
+                    <i class="fi fi-br-eye toggle-password" data-target="confirm-new-pass"></i>
+                  </div>
+                  <div id="confirm-pass-indicator" class="password-indicator"></div>
+                  
+                  <div class="form__btn">
+                    <button type="submit" class="btn btn--md">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!--=============== NEWSLETTER ===============-->
+     <div id="newsletter-placeholder"></div>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo"><img src="assets/img/logo.svg" alt="logo" class="footer__logo-img"></a>
+          
+          <h4 class="footer__subtitle">Contact</h4>
+
+          <p class="footer__description"><span>Address:</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p class="footer__description"><span>Phone:</span>(+880)12345678/(+880)12345679</p>
+          <p class="footer__description"><span>Hours:</span>10:00 - 18:00, Mon - Sat</p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+            <div class="footer__social-links flex">
+              <a href=""><img src="assets/img/icon-facebook.svg" alt="facebook" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-twitter.svg" alt="twitter" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-instagram.svg" alt="instagram" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-pinterest.svg" alt="pinterest" class="footer__social-icon"></a>
+              <a href=""><img src="assets/img/icon-youtube.svg" alt="youtube" class="footer__social-icon"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h4 class="footer__subtitle">Address</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Delivery Information</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h4 class="footer__subtitle">My Account</h4>
+          <ul class="footer__links">
+            <li><a href="login-register.html" class="footer__link">Sign In</a></li>
+            <li><a href="cart.html" class="footer__link">View Cart</a></li>
+            <li><a href="wishlist.html" class="footer__link">My Wishlist</a></li>
+            <li><a href="#" class="footer__link">Track My Order</a></li>
+            <li><a href="#" class="footer__link">Help</a></li>
+            <li><a href="#" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+          <img src="assets/img/payment-method.png" alt="payment-method">
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="copyright">© 2025 <span class="brand__name">Ratna</span> All rights reserved.</p>
+        <span class="designer">Designed by <span class="designer__name">Kapil Bairagi</span> with ❤️</span>
+      </div>
+    </footer>
+    <!--=============== ACCOUNTS PAGE SCRIPT ===============-->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 1. Check if user is logged in
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+        if (!loggedInUser) {
+          alert("You must be logged in to view this page.");
+          window.location.href = 'login.html';
+          return;
+        }
+
+        // 2. Populate Dashboard Data
+        const welcomeMsg = document.getElementById('welcome-message');
+        if (welcomeMsg) welcomeMsg.textContent = `Hello, ${loggedInUser.username}!`;
+
+        const dashName = document.getElementById('dash-name');
+        if (dashName) dashName.textContent = loggedInUser.username;
+
+        const dashEmail = document.getElementById('dash-email');
+        if (dashEmail) dashEmail.textContent = loggedInUser.email;
+
+        const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+        const dashWishlist = document.getElementById('dash-wishlist');
+        if (dashWishlist) dashWishlist.textContent = wishlistItems.length;
+
+        // 3. Handle Tab Switching
+        const tabs = document.querySelectorAll('.account__tab');
+        const tabContents = document.querySelectorAll('.tab__content');
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            if (this.id === 'logout-btn') return;
+            const targetId = this.getAttribute('data-target');
+            if (!targetId) return;
+
+            tabs.forEach(t => t.classList.remove('active-tab'));
+            tabContents.forEach(c => c.classList.remove('active-tab'));
+
+            this.classList.add('active-tab');
+            const targetContent = document.querySelector(targetId);
+            if (targetContent) targetContent.classList.add('active-tab');
+          });
+        });
+
+        // 4. Handle Update Profile Form
+        const updateForm = document.getElementById('update-profile-form');
+        const updateUsernameInput = document.getElementById('update-username');
+
+        if (updateUsernameInput) updateUsernameInput.value = loggedInUser.username;
+
+        if (updateForm) {
+            updateForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const newUsername = updateUsernameInput.value.trim();
+                if (newUsername === "") return alert("Username cannot be empty.");
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/update-profile', {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ userId: loggedInUser.id, newUsername: newUsername })
+                    });
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        loggedInUser.username = newUsername;
+                        localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+                        alert("Profile updated successfully!");
+                        window.location.reload(); 
+                    } else {
+                        alert(data.message);
+                    }
+                } catch (error) {
+                    alert("Error: Make sure your backend server is running.");
+                }
+            });
+        }
+
+        // 5. Handle User Orders & Dashboard Stats
+        const ordersBody = document.getElementById('user-orders-body');
+        const allOrders = JSON.parse(localStorage.getItem('orders')) || [];
+        
+        const userOrders = allOrders.filter(order => 
+            order.customer && order.customer.email.toLowerCase() === loggedInUser.email.toLowerCase()
+        );
+
+        // Update Dashboard Order Stats
+        const dashOrders = document.getElementById('dash-orders');
+        const dashPending = document.getElementById('dash-pending');
+        if (dashOrders) dashOrders.textContent = userOrders.length;
+        if (dashPending) {
+            const pendingCount = userOrders.filter(o => o.status.toLowerCase() === 'pending').length;
+            dashPending.textContent = pendingCount;
+        }
+
+        // Populate Orders Table
+        if (ordersBody) {
+            if (userOrders.length === 0) {
+                ordersBody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 20px;">You have not placed any orders yet.</td></tr>`;
+            } else {
+                userOrders.reverse().forEach(order => {
+                    const orderDate = new Date(order.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    const statusColor = order.status.toLowerCase() === 'completed' ? 'green' : 'orange';
+                    
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>#${order.id.split('-')[1].slice(-4)}</td>
+                        <td>${orderDate}</td>
+                        <td><span style="color: ${statusColor}; font-weight: 600;">${order.status}</span></td>
+                        <td>$${order.totals.total.toFixed(2)}</td>
+                        <td><a href="#" class="view__order" onclick="alert('Order ${order.id} details will be available soon!')">View</a></td>
+                    `;
+                    ordersBody.appendChild(tr);
+                });
+            }
+        }
+
+        // 6. Load All Addresses from MySQL
+        const addressListContainer = document.getElementById('address-list-container');
+
+        async function loadAddresses() {
+            if (!addressListContainer) return;
+
+            try {
+                const response = await fetch(`http://localhost:3000/api/addresses/${loggedInUser.id}`);
+                const addresses = await response.json();
+
+                if (addresses.length === 0) {
+                    addressListContainer.innerHTML = `<p style="color: var(--text-color-light); padding: 1rem;">You haven't saved any shipping addresses yet.</p>`;
+                    return;
+                }
+
+                addressListContainer.innerHTML = ''; 
+                
+                addresses.forEach((addr, index) => {
+                    const card = document.createElement('div');
+                    card.style.cssText = "border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; position: relative;";
+                    
+                    card.innerHTML = `
+                        <h4 style="margin-bottom: 0.5rem; color: var(--title-color); font-size: 1rem; border-bottom: 1px solid var(--border-color-alt); padding-bottom: 0.5rem;">Address ${index + 1}</h4>
+                        
+                        <address class="address" style="line-height: 1.6; font-size: 0.95rem; font-style: normal;">
+                            <strong>${addr.name}, ${addr.phone}</strong><br>
+                            ${addr.city}, ${addr.street}, ${addr.postal}
+                        </address>
+                        
+                        <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                            <a href="cart.html?edit=${addr.id}" class="edit" style="font-size: 0.9rem;"><i class="fi-br-edit"></i> Edit</a>
+                            <a href="#" class="delete-address-btn" data-id="${addr.id}" style="color: #dc3545; font-size: 0.9rem;"><i class="fi-br-trash"></i> Delete</a>
+                        </div>
+                    `;
+                    addressListContainer.appendChild(card);
+                });
+
+                // Attach Delete Events
+                document.querySelectorAll('.delete-address-btn').forEach(btn => {
+                    btn.addEventListener('click', async function(e) {
+                        e.preventDefault();
+                        if (!confirm('Are you sure you want to delete this address?')) return;
+                        
+                        const id = this.getAttribute('data-id');
+                        try {
+                            const res = await fetch(`http://localhost:3000/api/delete-address/${id}`, { method: 'DELETE' });
+                            if (res.ok) {
+                                if (typeof showNotification === 'function') showNotification('Address deleted');
+                                else alert('Address deleted');
+                                loadAddresses(); 
+                            }
+                        } catch (error) {
+                            alert('Error deleting address');
+                        }
+                    });
+                });
+
+            } catch (error) {
+                console.error("Error loading addresses:", error);
+                addressListContainer.innerHTML = `<p style="color: red; padding: 1rem;">Error loading addresses.</p>`;
+            }
+        }
+
+        loadAddresses();
+
+        // 7. Handle Logout
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+          logoutBtn.addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            alert("Logged out successfully.");
+            window.location.href = 'index.html';
+          });
+        }
+                // 8. Handle Change Password
+        const changePassForm = document.getElementById('change-password-form');
+        const currentPassInput = document.getElementById('current-pass');
+        const newPassInput = document.getElementById('new-pass');
+        const confirmNewPassInput = document.getElementById('confirm-new-pass');
+        const currentPassIndicator = document.getElementById('current-pass-indicator');
+        const newPassIndicator = document.getElementById('new-pass-indicator');
+        const confirmPassIndicator = document.getElementById('confirm-pass-indicator');
+
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        // --- 1. Live Check for Current Password ---
+        if (currentPassInput) {
+            currentPassInput.addEventListener('blur', async function() {
+                const val = this.value;
+                if (val.length === 0) {
+                    currentPassIndicator.innerHTML = "";
+                    currentPassIndicator.className = "password-indicator";
+                    return;
+                }
+
+                currentPassIndicator.innerHTML = "Checking...";
+                currentPassIndicator.className = "password-indicator";
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/check-password', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ userId: loggedInUser.id, password: val })
+                    });
+                    const data = await response.json();
+
+                    if (data.isValid) {
+                        currentPassIndicator.innerHTML = "✔ Correct";
+                        currentPassIndicator.className = "password-indicator success";
+                    } else {
+                        currentPassIndicator.innerHTML = "❌ Incorrect Password";
+                        currentPassIndicator.className = "password-indicator error";
+                    }
+                } catch (error) {
+                    console.error("Error checking password", error);
+                    currentPassIndicator.innerHTML = "";
+                }
+            });
+        }
+
+        // --- 2. Validate New Password ---
+        function validateNewPassword() {
+            const val = newPassInput.value;
+            
+            if (val.length === 0) {
+                newPassIndicator.innerHTML = "";
+                newPassIndicator.className = "password-indicator";
+                return false;
+            }
+            
+            if (val === currentPassInput.value) {
+                newPassIndicator.innerHTML = "❌ New password cannot be same as current";
+                newPassIndicator.className = "password-indicator error";
+                return false;
+            }
+            
+            if (passwordRegex.test(val)) {
+                newPassIndicator.innerHTML = "✔ Done";
+                newPassIndicator.className = "password-indicator success";
+                return true;
+            } else {
+                newPassIndicator.textContent = "Must be 8+ chars, 1 Upper, 1 Lower, 1 Number, only @$!%*?&";
+                newPassIndicator.className = "password-indicator error";
+                return false;
+            }
+        }
+
+        // --- 3. Validate Confirm Password ---
+        function validateConfirmNewPassword() {
+            const passVal = newPassInput.value;
+            const confirmVal = confirmNewPassInput.value;
+            
+            if (confirmVal.length === 0) {
+                confirmPassIndicator.innerHTML = "";
+                confirmPassIndicator.className = "password-indicator";
+                return false;
+            }
+            if (passVal === confirmVal) {
+                confirmPassIndicator.innerHTML = "✔ Passwords Match";
+                confirmPassIndicator.className = "password-indicator success";
+                return true;
+            } else {
+                confirmPassIndicator.textContent = "Passwords do not match";
+                confirmPassIndicator.className = "password-indicator error";
+                return false;
+            }
+        }
+
+        if (newPassInput) {
+            newPassInput.addEventListener('input', () => {
+                validateNewPassword();
+                if (confirmNewPassInput.value.length > 0) validateConfirmNewPassword();
+            });
+            confirmNewPassInput.addEventListener('input', validateConfirmNewPassword);
+        }
+
+        // --- 4. Form Submission ---
+        if (changePassForm) {
+            changePassForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                if (!validateNewPassword() || !validateConfirmNewPassword()) {
+                    return; 
+                }
+
+                const currentPassword = currentPassInput.value;
+                const newPassword = newPassInput.value;
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/change-password', {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ userId: loggedInUser.id, currentPassword, newPassword })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        // Success: Show message
+                        if (typeof showNotification === 'function') {
+                            showNotification("Password changed! Please login again.", "success");
+                        } else {
+                            alert("Password changed! Please login again.");
+                        }
+                        
+                        // Logout automatically and redirect to login
+                        localStorage.removeItem('loggedInUser'); 
+                        setTimeout(() => { 
+                            window.location.href = 'login.html'; 
+                        }, 2000);
+
+                    } else {
+                        if (typeof showNotification === 'function') showNotification(data.message, "error");
+                        else alert(data.message);
+                    }
+                } catch (error) {
+                    alert("Error: Make sure your backend server is running.");
+                }
+            });
+        }
+      
+      
+      });
+    </script>
+     <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/cart-manager.js"></script>
+    <script src="assets/js/wishlist-manager.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

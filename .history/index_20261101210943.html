@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta chabret="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FLATICON ===============-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Home</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <div id="header-placeholder"></div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== HOME ===============-->
+      <section class="home section--lg">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <span class="home__subtitle">Hot promotions</span>
+            <h1 class="home__title">Discover our <span>Latest Offer</span></h1>
+            <p class="home__description">
+              Save more with coupons & up to 20% off!
+            </p>
+            <a href="offers.html" class="btn">Shop Now</a>
+          </div>
+
+          <img src="assets/img/home-img.png" alt="" class="home__img">
+        </div>
+      </section>
+
+      <!--=============== CATEGORIES ===============-->
+      <section class="categories container section">
+        <h3 class="section__title"><span>Popular</span>Categories</h3>
+
+       <div class="categories__container swiper">
+         <div class="swiper-wrapper">
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-1.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">T-Shirt</h3>
+           </a>
+
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-2.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">Bags</h3>
+           </a>
+
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-3.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">Sandal</h3>
+           </a>
+
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-4.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">Scarf Cap</h3>
+           </a>
+
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-5.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">Shoes</h3>
+           </a>
+
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-6.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">Pillowcase</h3>
+           </a>
+
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-7.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">Jumpsuit</h3>
+           </a>
+
+           <a href="shop.html" class="category__item swiper-slide">
+            <img src="assets/img/category-8.jpg" alt="Category 1" class="category__img">
+            <h3 class="category__title">Hats</h3>
+           </a>
+         </div>
+
+         <div class="swiper-button-next"><i class="fi fi-br-angle-right"></i></div>
+         <div class="swiper-button-prev"><i class="fi fi-br-angle-left"></i></div>
+       </div>
+      </section>
+
+     <!--=============== PRODUCTS ===============-->
+      <section class="products section container">
+        <div class="tab__btns">
+          <span class="tab__btn active-tab" data-target="#featured">Featured</span>
+          <span class="tab__btn" data-target="#popular">Popular</span>
+          <span class="tab__btn" data-target="#new-added">New Added</span>
+        </div>
+
+        <div class="tab__items">
+          <!-- FEATURED TAB -->
+          <div class="tab__item active-tab" content id="featured">
+            <div class="products__container grid">
+              <!-- products-render.js will inject featured products here -->
+            </div>
+          </div>
+
+          <!-- POPULAR TAB -->
+          <div class="tab__item" content id="popular">
+            <div class="products__container grid">
+              <!-- products-render.js will inject popular products here -->
+            </div>
+          </div>
+
+          <!-- NEW ADDED TAB -->
+          <div class="tab__item" content id="new-added">
+            <div class="products__container grid">
+              <!-- products-render.js will inject new-added products here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== DEALS ===============-->
+      <section class="deals section">
+        <div class="deals__container container grid">
+          <div class="deals__item">
+            <div class="deals__group">
+              <h3 class="deals__brand">Deal of the Day</h3>
+              <span class="deals__category">Limited Time Offer</span>
+            </div>
+              <h4 class="deals__title">Summer Collection New Modern Designs</h4>
+
+              <div class="deals__price flex">
+                <span class="new__price">$49.99</span>
+                <span class="old__price">$59.99</span>
+              </div>
+              
+
+              <div class="deals__group">
+                <p class="deals__countdown-text">Hurry Up! Offer End In:</p>
+
+                <div id="deal-day-timer" class="countdown">
+                  <div class="countdown__amount">
+                    <p class="countdown__period">02</p>
+                    <span class="unit">Days</span>
+                  </div>
+                  <div class="countdown__amount">
+                    <p class="countdown__period">22</p>
+                    <span class="unit">Hours</span>
+                  </div>
+                  <div class="countdown__amount">
+                    <p class="countdown__period">57</p>
+                    <span class="unit">Mins</span>
+                  </div>
+                  <div class="countdown__amount">
+                    <p class="countdown__period">24</p>
+                    <span class="unit">Sec</span>
+                  </div>
+                </div>
+              </div>
+              <div class="deals__btn">
+                <a href="details.html" class="btn btn--md">Shop Now</a>
+              </div>
+           
+          </div>
+
+          <div class="deals__item">
+            <div class="deals__group">
+              <h3 class="deals__brand">Women's Fashion</h3>
+              <span class="deals__category">Cloth & Bag</span>
+            </div>
+              <h4 class="deals__title">Try something New On Vacation</h4>
+
+              <div class="deals__price flex">
+                <span class="new__price">$59.99</span>
+                <span class="old__price">$69.99</span>
+              </div>
+              
+
+              <div class="deals__group">
+                <p class="deals__countdown-text">Hurry Up! Offer End In:</p>
+
+                <div id="women-fashion-timer" class="countdown">
+                  <div class="countdown__amount">
+                    <p class="countdown__period">02</p>
+                    <span class="unit">Days</span>
+                  </div>
+                  <div class="countdown__amount">
+                    <p class="countdown__period">22</p>
+                    <span class="unit">Hours</span>
+                  </div>
+                  <div class="countdown__amount">
+                    <p class="countdown__period">57</p>
+                    <span class="unit">Mins</span>
+                  </div>
+                  <div class="countdown__amount">
+                    <p class="countdown__period">24</p>
+                    <span class="unit">Sec</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="deals__btn">
+                <a href="details.html" class="btn btn--md">Shop Now</a>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== Trending ===============-->
+       <section class="new__trending products container section" data-target="#new-trending">
+        <h3 class="section__title"><span>New</span> Trending</h3>
+
+       <div class="new__container swiper">
+         <!-- Leave this completely empty! -->
+         <div class="swiper-wrapper" content id="new-trending">
+         </div>
+
+         <div class="swiper-button-next"><i class="fi fi-br-angle-right"></i></div>
+         <div class="swiper-button-prev"><i class="fi fi-br-angle-left"></i></div>
+       </div>
+      </section>
+
+      <!--=============== SHOWCASE ===============-->
+      <section class="showcase section">
+        <div class="showcase__container container grid">
+          
+          <div class="showcase__wrapper">
+            <h3 class="section__title">Hot Releases</h3>
+            <div id="showcase-hot"><!-- JS will inject here --></div>
+          </div>
+
+          <div class="showcase__wrapper">
+            <h3 class="section__title">Deals & Outlets</h3>
+            <div id="showcase-deals"><!-- JS will inject here --></div>
+          </div>
+
+          <div class="showcase__wrapper">
+            <h3 class="section__title">Top Selling</h3>
+            <div id="showcase-top"><!-- JS will inject here --></div>
+          </div>
+
+          <div class="showcase__wrapper">
+            <h3 class="section__title">Trendy</h3>
+            <div id="showcase-trendy"><!-- JS will inject here --></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <div id="newsletter-placeholder"></div>
+
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <div id="footer-placeholder"></div>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/cart-manager.js"></script>
+    <script src="assets/js/wishlist-manager.js"></script>
+
+    <!-- Uncomment this line! -->
+    <script src="assets/js/products-render.js"></script>
+
+    <!-- component-loader script -->
+    <script src="components/component-loader.js"></script> 
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== ADD TO CART POPUP ===============-->
+    <div id="popup-placeholder"></div>
+    <div id="quick-view-placeholder"></div>
+  </body>
+</html>

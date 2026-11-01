@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FLATICON ===============-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/img/tab-img.png" type="image/png">
+    <title>Register</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <div id="header-placeholder"></div>
+    <!--=============== LOGIN-REGISTER ===============-->
+      <section class="login-register section--lg">
+        <div class="login-register__container container">
+          <a href="index.html"><img src="assets/img/logo.svg" alt="Logo" /></a>
+          <div class="login">
+            <h3 class="section__title">Create Account</h3>
+            <form action="" class="form grid">
+              <div class="input-box">
+                <input type="text" placeholder="UserName" class="form__input" required>
+                <i class="fi fi-br-user"></i>
+              </div>
+
+              <div class="input-box">
+                <input type="email" placeholder="Email" class="form__input" required>
+                <i class="fi fi-br-envelope"></i>
+              </div>
+
+              <!-- Password Input -->
+              <div class="input-box">
+                <input type="password" id="reg-password" placeholder="Password" class="form__input">
+                <i class="fi fi-br-lock"></i>
+                <i class="fi fi-br-eye toggle-password" data-target="reg-password"></i>
+              </div>
+              <!-- Indicator for Password -->
+              <div id="password-indicator" class="password-indicator"></div>
+
+              <!-- Confirm Password Input -->
+              <div class="input-box">
+                <input type="password" id="reg-confirm-password" placeholder="Confirm Password" class="form__input" disabled>
+                <i class="fi fi-br-lock"></i>
+                <i class="fi fi-br-eye toggle-password" data-target="reg-confirm-password"></i>
+              </div>
+              <!-- Indicator for Confirm Password -->
+              <div id="confirm-indicator" class="password-indicator"></div>
+
+              <div class="form__btn">
+                <button type="submit" class="btn btn--full">Create Account</button>
+              </div>
+              
+              <div class="register__bottom">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+          <!--=============== AUTHENTICATION SCRIPT ===============-->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('.login-register form');
+        const passwordInput = document.getElementById('reg-password');
+        const confirmInput = document.getElementById('reg-confirm-password');
+        const passIndicator = document.getElementById('password-indicator');
+        const confirmIndicator = document.getElementById('confirm-indicator');
+
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        function validatePassword() {
+            const val = passwordInput.value;
+            if (val.length === 0) {
+                passIndicator.innerHTML = "";
+                passIndicator.className = "password-indicator";
+                confirmInput.disabled = true; 
+                return false;
+            }
+            if (passwordRegex.test(val)) {
+                passIndicator.innerHTML = "✔"; 
+                passIndicator.className = "password-indicator success";
+                confirmInput.disabled = false; 
+                return true;
+            } else {
+                passIndicator.textContent = "Must be 8+ chars, 1 Upper, 1 Lower, 1 Number, only @$!%*?&";
+                passIndicator.className = "password-indicator error";
+                confirmInput.disabled = true; 
+                return false;
+            }
+        }
+
+        function validateConfirmPassword() {
+            const passVal = passwordInput.value;
+            const confirmVal = confirmInput.value;
+            if (confirmVal.length === 0) {
+                confirmIndicator.innerHTML = "";
+                confirmIndicator.className = "password-indicator";
+                return false;
+            }
+            if (passVal === confirmVal) {
+                confirmIndicator.innerHTML = "✔";
+                confirmIndicator.className = "password-indicator success";
+                return true;
+            } else {
+                confirmIndicator.textContent = "Passwords do not match";
+                confirmIndicator.className = "password-indicator error";
+                return false;
+            }
+        }
+
+        passwordInput.addEventListener('input', () => {
+            validatePassword();
+            if (confirmInput.value.length > 0) validateConfirmPassword(); 
+        });
+        confirmInput.addEventListener('input', validateConfirmPassword);
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+            if (!validatePassword() || !validateConfirmPassword()) return; 
+
+            const username = document.querySelector('input[placeholder="UserName"]').value;
+            const email = document.querySelector('input[placeholder="Email"]').value;
+            const password = passwordInput.value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, email, password })
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    alert("Account created successfully! Please login.");
+                    window.location.href = 'login.html'; 
+                } else {
+                    alert(data.message); 
+                }
+            } catch (error) {
+                alert("Error: Make sure your backend server is running.");
+            }
+        });
+      });
+    </script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

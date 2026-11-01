@@ -1,0 +1,61 @@
+<div class="cart-popup" id="cart-popup">
+      <div class="cart-popup__overlay"></div>
+      <div class="cart-popup__content">
+        <button class="cart-popup__close" id="popup-close">&times;</button>
+
+        <div class="cart-popup__grid">
+          <!-- Left: Product Image -->
+          <div class="cart-popup__img-box">
+            <img id="popup-img" src="assets/img/default.jpg" alt="Product Image" class="cart-popup__img">
+          </div>
+
+          <!-- Right: Product Info -->
+          <div class="cart-popup__details">
+            <h2 id="popup-title" class="details__title">Colorful Pattern Shirts</h2>
+            
+            <div class="details__group">
+              <span class="details__category" id="popup-category">Clothing</span>
+              <p class="details__brand">Brand: <span>Nike</span></p>
+            </div>
+
+            <div class="details__price flex">
+              <span id="popup-new-price" class="new__price">$29.99</span>
+              <span id="popup-old-price" class="old__price">$34.99</span>
+              <span id="popup-discount" class="discount">-14%</span>
+            </div>
+
+            <p class="details__description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+            </p>
+
+            <ul class="details__meta">
+              <li><span>SKU:</span> <span>N/A</span></li>
+              <li><span>Availability:</span> <span class="availability in-stock">In Stock</span></li>
+            </ul>
+
+            <div class="details__group">
+              <span>Color</span>
+              <div id="popup-colors" class="color__list">
+                <!-- Colors will be added dynamically -->
+              </div>
+            </div>
+
+            <div class="details__group">
+              <span>Size</span>
+              <div id="popup-sizes" class="size__list">
+                <!-- Sizes will be added dynamically -->
+              </div>
+            </div>
+
+            <div class="details__actions">
+              <input type="number" id="popup-quantity" class="quantity" value="1" min="1"/>
+              <!-- ADD THIS CONFIRM BUTTON -->
+              <button class="btn btn--sm details__cart-btn" id="confirm-add" aria-label="Add To Cart">
+                <i class="fi fi-br-shopping-bag-add"></i>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
